@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Page</title>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Fredoka", sans-serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #f08080;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: black;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+
+    .topnav {
+      overflow: hidden;
+      background-color: lightcoral;
+    }
+
+    .topnav a {
+      float: right;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: goldenrod;
+      color: black;
+    }
+
+    .topnav a.active {
+      color: white;
+    }
+
+    .footer {
+
+      left: 0;
+      bottom: 0;
+      position: fixed;
+      width: 100%;
+      background-color: lightcoral;
+      color: white;
+      text-align: center;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Blood Bank Website</h1>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="#">Blood Banks</a>
+    <a href="/contact">Contact</a>
+  </div>
+
+  <div id="main">
+    <div class="topnav">
+
+      <a class="active" href="admin_login.html">Login</a>
+      <a href="#news">Help</a>
+      <a href="/contact">Contact</a>
+      <a href="#about">About</a>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+  </div>
+
+  </div>
+  <footer>
+    <div class="footer">
+      <p>All copyright <br>
+        2022
+
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "200px";
+      document.getElementById("main").style.marginLeft = "200px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+</body>
+
+</html>
